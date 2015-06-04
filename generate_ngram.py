@@ -12,7 +12,6 @@ def generate_ngram(tokens, n):
 			ngrams[ngram] += 1
 		except:
 			ngrams[ngram] = 0
-		#ngrams.append(tuple(tokens[i:i+n])) 
 	sorted(ngrams.items(), key=lambda x: x[1])
 	return OrderedDict(sorted(ngrams.items(), key=lambda x: x[1], reverse=True))
 
